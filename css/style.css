@@ -1,0 +1,564 @@
+/* Initial setups*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    color: #555555;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+/************* Navigation Header ****************/
+.navigation {
+    position: absolute;
+    height: 5rem;
+    z-index: 100;
+    width: 100%;
+}
+
+.navigation-list {
+    list-style: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 10%;
+}
+
+.navigation-item {
+    float: left;
+    padding-bottom: .4rem;
+    transition: all 0.2s;
+}
+
+.navigation-item:hover {
+    border-bottom: 1px solid rgb(230, 124, 34);
+}
+
+.navigation-item:not(:last-child) {
+    margin-right: 2rem;
+}
+.navigation-link:link,
+.navigation-link:visited{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.logo {
+    width: 4.5rem;
+    display: inline-block;
+    position: absolute;
+    top: 1rem;
+    left: 10%;
+}
+
+/************ Header section *******************/
+.section-header {
+    height: 100vh;
+    background-image:
+            linear-gradient(
+                    to right bottom,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)),
+            url(../imgs/hero.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+}
+
+.heading-wrapper {
+    position: absolute;
+    top: 13.5rem;
+    left: 10%;
+}
+
+.heading-primary {
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+/******************** Reusable Buttons ********************/
+/* regular button*/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(230, 126 ,34, 0.8);
+    padding: .5rem 1rem;
+    border-radius: 10rem;
+    margin-right: .5rem;
+    transition: all .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    background-color: rgba(230, 126 ,34, 1);
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.9);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.9);
+}
+
+/* Outline Button */
+.btn-outline:link,
+.btn-outline:visited{
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: rgb(230, 126 ,34);
+    padding: .5rem 1rem;
+    border-radius: 10rem;
+    margin-right: .5rem;
+    transition: all .2s;
+    border: 1px solid rgb(230, 126 ,34);
+}
+
+.btn-outline:hover {
+    background-color: rgba(230, 126 ,34, 1);
+    color: white;
+}
+
+/********************** Features section *********************/
+.section-features {
+    padding-top: 4rem;
+}
+
+/*** Reusable Heading ***/
+.heading-secondary {
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.heading-secondary::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    background-color: rgb(230, 124, 34);
+    height: 0.25rem;
+    border-radius: 50%;
+    margin: 1rem auto;
+}
+
+.intro-para {
+    line-height: 1.4rem;
+    width: 50%;
+    margin-bottom: 0.5rem;
+}
+
+/* The Features grid part */
+.features-all {
+    width: 100%;
+}
+
+.feature {
+    padding: .5rem;
+    box-shadow: 0 .1rem .3rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    height: 18.5rem;
+}
+
+.feature-icon {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: rgb(230, 124, 34);
+}
+
+.feature-heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.feature-info {
+    text-align: center;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+}
+
+/************** Favourite meals section ****************/
+.favourite-meals {
+    padding-top: 5rem;
+}
+
+.favourite-meals::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.imgs-wrapper {
+    list-style: none;
+    width: 100%;
+}
+
+.imgs-wrapper li {
+    display: block;
+    float: left;
+    width: 25%;
+    background-color: black;
+}
+
+.imgs-wrapper li figure {
+    overflow: hidden;
+    width: 100%;
+}
+
+.img{
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    transition: all .2s;
+    opacity: .7;
+}
+
+.img:hover{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/******************** THE HOW SECTION ********************/
+.section-how {
+    padding-top: 5rem;
+    background-color: rgb(237, 240, 238);
+    padding-bottom: 2.5rem;
+}
+
+.iphone-wrapper {
+    width: 100%;
+}
+
+.iphone {
+    text-align: right;
+    width: 40%;
+}
+
+.list-number {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: inline-block;
+    color: rgb(230, 124, 34);
+    font-size: 1.8rem;
+    padding-top: 0.1rem;
+    text-align: center;
+    border: 1px solid rgb(230, 124, 34);
+    border-radius: 50%;
+    float: left;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    margin-bottom: .1rem;
+}
+
+.steps-wrapper:first-child {
+    margin-top: 2rem;
+}
+
+.steps-wrapper{
+    margin-bottom: 1.5rem;
+}
+
+.steps-wrapper-last{
+    margin-bottom: 6rem;
+}
+
+.steps-wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.download {
+     display: inline-block;
+ }
+
+.download img{
+    height: 2.5rem;
+    width: auto;
+    margin-right: .5rem;
+}
+
+.download-wrapper{
+    margin-left: 1.25rem;
+}
+
+/******************** CITIES SECTION ********************/
+.section-cities {
+    padding-top: 3.75rem;
+    padding-bottom: 2.5rem;
+}
+
+.city-wrapper {
+    border-radius: 5px;
+    overflow: hidden;
+}
+.city-img-wrapper {
+    width: 100%;
+}
+
+.city-img {
+    width: 100%;
+    background-size: cover;
+}
+
+.city-name {
+    text-transform: uppercase;
+    margin-top: 0.75rem;
+}
+
+.city-info-wrapper {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+.city-info {
+    font-size: 0.95rem;
+}
+
+.city-info:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.icon {
+    display: inline-block;
+    color: rgb(230, 124, 34);
+    margin-right: 10px;
+}
+
+/******************** COMMENTS SECTION ********************/
+.section-comments {
+    padding-top: 5rem;
+    height: 100vh;
+    background-image:
+            linear-gradient(
+                    to right bottom,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)),
+            url(../imgs/back-customers.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.color-white {
+    color: white;
+}
+
+.blockquote {
+    position: relative;
+}
+
+.blockquote::before {
+    display: block;
+    content: "\201C";
+    font-size: 4rem;
+    position: absolute;
+    top: -2rem;
+    left: 0;
+}
+
+.blockquote-text {
+    line-height: 1.5rem;
+    font-style: italic;
+}
+
+.blockquote-by {
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+.blockquote-pp {
+    display: inline-block;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background-color: aqua;
+    overflow: hidden;
+}
+
+.pp-img {
+    background-size: cover;
+    width: 100%;
+}
+
+.blockquote-by-name {
+    display: inline-block;
+    padding: 1rem .5rem;
+    transform: translateY(-.95rem);
+}
+
+/******************** SIGNUP SECTION ********************/
+.section-signup {
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+}
+
+.subscription-packs {
+    width: 80%;
+    padding: .5rem 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.packs-heading {
+    text-transform: uppercase;
+}
+
+.price-main {
+    font-size: 4rem;
+    color: rgb(230, 124, 34);
+}
+
+.price-period {
+    color: rgb(230, 124, 34);
+}
+
+.stats {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.pack-features {
+    margin-top: 1.5rem;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.pack-features ul {
+    list-style: none;
+}
+
+.pack-features li:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.yes_or_no {
+    display: inline-block;
+    color: rgb(230, 124, 34);
+    margin-right: .5rem;
+}
+
+.button {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/******************** CONTACT SECTION ********************/
+.section-contact {
+    padding-top: 3.75rem;
+}
+
+.input-wrapper {
+    margin: 1rem auto;
+}
+
+.input-wrapper label {
+    width: 30%;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.input_text {
+    margin-left: 2.5rem;
+    height: 2rem;
+    border: 1px solid lightgrey;
+    color: grey;
+    width: 40%;
+    padding: .5rem;
+    font-size: 0.8rem;
+}
+
+select {
+    width: 9rem;
+}
+
+.input-wrapper textarea {
+    height: 1.4rem;
+}
+
+.input_text-checkbox {
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+
+
+.input_text:focus {
+    outline: none;
+    border: 2px solid rgb(230, 124, 34);
+}
+
+.section-contact button {
+    background-color: white;
+    border: none;
+    position: relative;
+    width: 100%;
+}
+
+.center {
+    position: absolute;
+    top: -3rem;
+    left: 45%;
+}
+
+/******************** FOOTER SECTION ********************/
+.section-footer {
+    background-color: rgb(64, 66, 64);
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    color: grey;
+    padding-bottom: 2.5rem;
+}
+
+.footer-navigation-wrapper {
+    list-style: none;
+}
+
+.footer-navitem {
+    float: left;
+    margin-left: 1rem;
+}
+
+.nav:link,
+.nav:visited {
+    text-decoration: none;
+    color: gray;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.nav:hover {
+    color: lightgrey;
+}
+
+.logo {
+    font-size: 1rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+}
